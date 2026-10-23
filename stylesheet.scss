@@ -1,0 +1,84 @@
+.storelist-main {
+    margin: 0.5rem 0 0 0;
+}
+
+.character-panel {
+    margin: 0 0 1rem 0;
+    cursor: default;
+
+    h5 {
+        font-size: 1rem;
+
+        span {
+            font-style: normal;
+            font-size: 80%;
+        }
+    }
+
+    ul {
+        font-size: 90%;
+    }
+
+    &.character-skills {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            list-style: none;
+            padding: 0;
+            text-align: center;
+
+            .character-skill {
+                .skill-block {
+                    display: flex;
+                    flex-flow: column;
+                    width: 60px;
+                    margin: 0 auto;
+
+                    .skill-name {
+                        background: var(--color-1);
+                        color: var(--color-2);
+                        font-weight: bold;
+                        font-style: italic;
+                    }
+
+                    .skill-value {
+                        font-size: 150%;
+                        font-weight: bolder;
+                        padding: 1rem;
+                        border: 2px solid;
+                        align-self: center;
+                        aspect-ratio: 1/1;
+                    }
+                }
+
+                &.character-skill-con {
+                    order: 1;
+                }
+
+                &.character-skill-agi {
+                    order: 4;
+                }
+
+                &.character-skill-sab {
+                    order: 2;
+                }
+
+                &.character-skill-int {
+                    order: 5;
+                }
+
+                &.character-skill-per {
+                    order: 3;
+                }
+
+                &.character-skill-est {
+                    order: 6;
+                }
+            }
+        }
+    }
+
+    &:last-child {
+        margin: 0;
+    }
+}
